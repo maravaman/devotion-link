@@ -1,46 +1,48 @@
 import { motion } from "framer-motion";
-import { Users, Target, Heart } from "lucide-react";
+import { Target, Heart, Landmark, CreditCard } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
-
-const trustees = [
-  {
-    name: "Sri Ramesh Kumar",
-    role: "Chairman",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
-    description: "Leading the trust with devotion and dedication for over 20 years.",
-  },
-  {
-    name: "Dr. Lakshmi Devi",
-    role: "Secretary",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
-    description: "Managing temple administration and cultural activities.",
-  },
-  {
-    name: "Sri Venkat Rao",
-    role: "Treasurer",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop",
-    description: "Overseeing financial management and transparency.",
-  },
-  {
-    name: "Smt. Padma Sundaram",
-    role: "Trustee",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
-    description: "Coordinating religious ceremonies and festivals.",
-  },
-];
 
 const AboutTrust = () => {
   return (
     <Layout>
       <PageHeader
         title="About the Trust"
-        subtitle="Sri Temple Charitable Trust - Serving humanity through devotion"
+        subtitle="Sri Kamakshi Temple Service Trust - Serving devotees with dedication"
         image="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&h=400&fit=crop"
       />
 
-      {/* Vision & Mission */}
+      {/* Trust Info */}
       <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="card-temple p-8 mb-8"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-saffron to-gold flex items-center justify-center">
+                  <Landmark className="w-7 h-7 text-primary-foreground" />
+                </div>
+                <div>
+                  <h2 className="font-display text-2xl font-bold text-foreground">
+                    Sri Kamakshi Temple Service Trust
+                  </h2>
+                  <p className="text-muted-foreground">Regd. No. 31 / 2025</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                The trust manages temple administration, poojas, festivals, and development activities. We are committed to preserving the sacred traditions of Sri Sri Sri Mahaganapathi Kamakshi Sametha Ekambareswara Temple and ensuring that all devotees receive proper spiritual services.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
@@ -56,7 +58,7 @@ const AboutTrust = () => {
                 Our Vision
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                To create a spiritual sanctuary that fosters devotion, preserves our sacred traditions, and promotes the well-being of all beings. We envision a world where spiritual wisdom guides humanity towards peace and harmony.
+                To create a spiritual sanctuary that fosters devotion, preserves our sacred Vedic traditions, and promotes the well-being of all devotees. We aim to spread the divine blessings of Lord Ekambareswara, Goddess Kamakshi, and Lord Mahaganapathi to all who seek them.
               </p>
             </motion.div>
 
@@ -74,10 +76,70 @@ const AboutTrust = () => {
                 Our Mission
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                To maintain the temple as a center of spiritual excellence, conduct sacred rituals with utmost devotion, serve the community through charitable activities, and educate devotees about our rich cultural heritage.
+                To maintain the temple as a center of spiritual excellence, conduct sacred rituals with utmost devotion following authentic Vedic traditions, serve the community through Mandala poojas and special abhishekams, and provide a sacred space for all devotees.
               </p>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Bank Details */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-display text-3xl font-bold text-foreground mb-4">
+              Bank Details for Donations
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Your generous contributions help us maintain the temple and serve devotees
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="card-temple p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center">
+                  <CreditCard className="w-7 h-7 text-foreground" />
+                </div>
+                <h3 className="font-display text-xl font-semibold text-foreground">
+                  Bank Transfer Details
+                </h3>
+              </div>
+              <div className="grid gap-4 text-sm">
+                <div className="flex justify-between py-3 border-b border-border">
+                  <span className="text-muted-foreground">Account Name</span>
+                  <span className="font-medium text-foreground">Sri Kamakshi Temple Service Trust</span>
+                </div>
+                <div className="flex justify-between py-3 border-b border-border">
+                  <span className="text-muted-foreground">Account Number</span>
+                  <span className="font-medium text-foreground font-mono">060911010000152</span>
+                </div>
+                <div className="flex justify-between py-3 border-b border-border">
+                  <span className="text-muted-foreground">IFSC Code</span>
+                  <span className="font-medium text-foreground font-mono">UBIN0806099</span>
+                </div>
+                <div className="flex justify-between py-3 border-b border-border">
+                  <span className="text-muted-foreground">Bank Name</span>
+                  <span className="font-medium text-foreground">Union Bank of India</span>
+                </div>
+              </div>
+              <div className="mt-6 p-4 bg-primary/5 rounded-lg">
+                <p className="text-sm text-muted-foreground text-center">
+                  Digital payments accepted via <strong>BHIM, Google Pay, PhonePe, and Paytm</strong>
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -94,18 +156,18 @@ const AboutTrust = () => {
               Trust Activities
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Beyond temple maintenance, our trust engages in various charitable and community activities
+              Our trust is dedicated to serving devotees and maintaining sacred traditions
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: "Anna Danam", desc: "Free meals served to devotees and the needy daily" },
-              { title: "Education Support", desc: "Scholarships for underprivileged students" },
-              { title: "Medical Camps", desc: "Regular health check-ups and medical assistance" },
-              { title: "Cultural Programs", desc: "Promoting classical arts and spiritual education" },
-              { title: "Temple Maintenance", desc: "Preserving and enhancing temple infrastructure" },
-              { title: "Festival Celebrations", desc: "Grand celebrations of all major Hindu festivals" },
+              { title: "Temple Administration", desc: "Managing daily operations and maintaining temple premises" },
+              { title: "Daily Poojas", desc: "Conducting regular worship services and rituals" },
+              { title: "Mandala Deeksha", desc: "Organizing 41-day special pooja programs for devotees" },
+              { title: "Abhishekams", desc: "Performing sacred abhishekams including Panchamrutha Abhishekam" },
+              { title: "Festival Celebrations", desc: "Grand celebrations of major Hindu festivals" },
+              { title: "Temple Development", desc: "Continuous improvement of temple infrastructure and facilities" },
             ].map((activity, index) => (
               <motion.div
                 key={activity.title}
@@ -123,48 +185,27 @@ const AboutTrust = () => {
         </div>
       </section>
 
-      {/* Trustees */}
+      {/* Contact */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
           >
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-              <Users className="w-8 h-8 inline-block mr-3 text-primary" />
-              Our Trustees
+              Contact the Trust
             </h2>
-            <p className="text-muted-foreground">Meet the dedicated individuals guiding our temple</p>
+            <p className="text-muted-foreground mb-6">
+              For any inquiries regarding temple services or donations
+            </p>
+            <a
+              href="tel:+917207318809"
+              className="inline-flex items-center gap-2 text-xl font-semibold text-primary hover:underline"
+            >
+              📞 +91 72073 18809
+            </a>
           </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {trustees.map((trustee, index) => (
-              <motion.div
-                key={trustee.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="relative w-32 h-32 mx-auto mb-4">
-                  <img
-                    src={trustee.image}
-                    alt={trustee.name}
-                    className="w-full h-full rounded-full object-cover shadow-temple group-hover:shadow-temple-lg transition-shadow"
-                  />
-                  <div className="absolute inset-0 rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors" />
-                </div>
-                <h4 className="font-display text-lg font-semibold text-foreground">
-                  {trustee.name}
-                </h4>
-                <p className="text-primary text-sm font-medium mb-2">{trustee.role}</p>
-                <p className="text-muted-foreground text-sm">{trustee.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
     </Layout>

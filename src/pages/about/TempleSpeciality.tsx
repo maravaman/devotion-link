@@ -1,55 +1,56 @@
 import { motion } from "framer-motion";
-import { Star, Sparkles, Sun, Moon } from "lucide-react";
+import { Star, Sparkles, Sun, Moon, Clock } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
 
 const specialPoojas = [
   {
-    name: "Maha Rudrabhishekam",
-    description: "A powerful ritual involving 108 repetitions of sacred mantras while performing abhishekam with milk, honey, and sacred waters.",
-    benefit: "Removes negative energies and brings peace and prosperity",
-    timing: "Every Monday morning",
+    name: "Panchamrutha Abhishekam",
+    description: "Sacred abhishekam performed with five holy substances - milk, curd, ghee, honey, and sugar. Conducted during the 41-day Mandala Deeksha period with special decoration (Alankarana) and Maha Deeparadhana.",
+    benefit: "Divine blessings and spiritual purification",
+    timing: "5:00 AM during Mandala period",
+    price: "₹501/-",
   },
   {
-    name: "Sahasranamam Archana",
-    description: "Recitation of 1000 divine names while offering flowers at the sacred feet of the deity.",
-    benefit: "Fulfills wishes and brings divine blessings",
-    timing: "Daily at 11:00 AM",
+    name: "Mandala Deeksha (41 Days)",
+    description: "A 41-day intensive spiritual observance where devotees undertake special vows and participate in daily rituals. Continuous special prayers are conducted throughout this sacred period.",
+    benefit: "Spiritual transformation and divine grace",
+    timing: "Begins October 22, 2025",
   },
   {
-    name: "Pradhosham Pooja",
-    description: "Special evening worship during the auspicious Pradhosham period dedicated to Lord Shiva.",
-    benefit: "Absolves sins and grants moksha",
-    timing: "13th day of each fortnight",
+    name: "Maha Deeparadhana",
+    description: "Grand lamp offering ceremony performed with devotion and reverence to the presiding deities.",
+    benefit: "Removes darkness of ignorance",
+    timing: "During special occasions",
   },
   {
-    name: "Navgraha Shanti",
-    description: "Rituals to appease all nine planetary deities for cosmic harmony.",
-    benefit: "Removes planetary afflictions",
-    timing: "By appointment",
+    name: "Special Alankarana",
+    description: "Divine decoration of the deities with flowers, ornaments, and sacred items during festivals and special poojas.",
+    benefit: "Blessed darshan of decorated deities",
+    timing: "Festival days and Mandala period",
   },
 ];
 
 const traditions = [
   {
     icon: Sun,
-    title: "Morning Rituals",
-    description: "The day begins at 5:30 AM with Suprabhatam - melodious wake-up hymns for the deity, followed by Abhishekam and Alankaram.",
+    title: "Early Morning Abhishekam",
+    description: "The temple opens at 5:00 AM during the Mandala period with Panchamrutha Abhishekam, allowing devotees to start their day with divine blessings.",
   },
   {
     icon: Sparkles,
-    title: "Sacred Offerings",
-    description: "Our temple follows the ancient tradition of preparing fresh prasadam daily using pure ingredients and traditional recipes.",
+    title: "Vedic Rituals",
+    description: "All ceremonies follow authentic Vedic traditions, performed by learned priests who maintain the sanctity of ancient practices.",
   },
   {
     icon: Moon,
-    title: "Evening Deeparadhana",
-    description: "The magical evening aarti with hundreds of oil lamps creates an atmosphere of divine brilliance and peace.",
+    title: "Mandala Deeksha",
+    description: "The renowned 41-day spiritual program attracts devotees who observe special vows and participate in intensive worship.",
   },
   {
     icon: Star,
-    title: "Festival Celebrations",
-    description: "Each festival is celebrated with elaborate decorations, special poojas, cultural programs, and community feasts.",
+    title: "Trinity Worship",
+    description: "The unique blessing of worshipping Lord Ekambareswara, Goddess Kamakshi, and Lord Mahaganapathi together in one temple.",
   },
 ];
 
@@ -61,6 +62,29 @@ const TempleSpeciality = () => {
         subtitle="Discover the unique spiritual traditions and sacred rituals"
         image="https://images.unsplash.com/photo-1609619385002-f40f1df9b5a4?w=1200&h=400&fit=crop"
       />
+
+      {/* Upcoming Mandala */}
+      <section className="py-8 bg-gradient-to-r from-saffron/20 to-gold/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
+              <Clock className="w-5 h-5 text-primary" />
+              <span className="font-medium text-primary">Upcoming Event</span>
+            </div>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
+              Mandala Deeksha 2025
+            </h2>
+            <p className="text-muted-foreground">
+              41-Day Special Pooja Program begins <strong className="text-foreground">October 22, 2025</strong>
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       {/* What Makes Us Special */}
       <section className="py-16">
@@ -75,7 +99,7 @@ const TempleSpeciality = () => {
               What Makes Us Special
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our temple is renowned for its unique rituals, powerful blessings, and centuries-old traditions
+              Our temple is renowned for its unique rituals, powerful blessings, and authentic Vedic traditions
             </p>
           </motion.div>
 
@@ -135,7 +159,7 @@ const TempleSpeciality = () => {
                   {pooja.name}
                 </h3>
                 <p className="text-muted-foreground mb-4">{pooja.description}</p>
-                <div className="flex flex-wrap gap-4 text-sm">
+                <div className="flex flex-wrap gap-3 text-sm">
                   <div className="px-3 py-1 rounded-full bg-primary/10 text-primary">
                     <Sparkles className="w-4 h-4 inline-block mr-1" />
                     {pooja.benefit}
@@ -143,6 +167,11 @@ const TempleSpeciality = () => {
                   <div className="px-3 py-1 rounded-full bg-gold/20 text-gold-light">
                     {pooja.timing}
                   </div>
+                  {pooja.price && (
+                    <div className="px-3 py-1 rounded-full bg-maroon/20 text-maroon font-medium">
+                      {pooja.price}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -171,27 +200,50 @@ const TempleSpeciality = () => {
               viewport={{ once: true }}
             >
               <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-                Sacred Beliefs & Offerings
+                The Divine Trinity
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Our temple is believed to be a Swayambhu Kshetra - a place where the divine manifested naturally without human installation. This makes the spiritual energy here particularly potent and beneficial.
+                  Sri Sri Sri Mahaganapathi Kamakshi Sametha Ekambareswara Temple offers the unique blessing of worshipping three powerful deities together - Lord Ekambareswara (Shiva), Goddess Kamakshi, and Lord Mahaganapathi.
                 </p>
                 <p>
-                  Devotees believe that prayers offered here during Pradosham time are especially powerful. Many have experienced miraculous blessings after sincere worship at this sacred site.
+                  Lord Mahaganapathi, the remover of obstacles, blesses devotees at the beginning of their worship. Goddess Kamakshi bestows prosperity and protection, while Lord Ekambareswara grants spiritual liberation.
                 </p>
                 <p>
-                  The temple prasadam, prepared using age-old recipes and offered with devotion, is considered highly sacred. Consuming it is believed to bring health, prosperity, and spiritual merit.
+                  The temple is particularly renowned for its Panchamrutha Abhishekam during the Mandala period, where devotees can participate in this sacred ritual by contributing ₹501/-.
                 </p>
               </div>
               <div className="mt-6 p-4 bg-gradient-to-r from-saffron/10 to-gold/10 rounded-xl border border-saffron/20">
                 <p className="text-sm text-foreground italic">
-                  "Those who worship with pure devotion at this temple are blessed with the removal of all obstacles and the fulfillment of righteous desires."
+                  "The worship of the divine trinity at this sacred temple brings complete blessings - removal of obstacles, prosperity, and spiritual enlightenment."
                 </p>
-                <p className="text-xs text-muted-foreground mt-2">— Temple Scripture</p>
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Contact for Pooja */}
+      <section className="py-12 bg-gradient-to-r from-saffron/10 to-maroon/10">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+              To Book Panchamrutha Abhishekam
+            </h3>
+            <p className="text-muted-foreground mb-4">
+              Contact us to participate in the sacred abhishekam during Mandala period
+            </p>
+            <a
+              href="tel:+917207318809"
+              className="inline-flex items-center gap-2 text-xl font-semibold text-primary hover:underline"
+            >
+              📞 +91 72073 18809
+            </a>
+          </motion.div>
         </div>
       </section>
     </Layout>
