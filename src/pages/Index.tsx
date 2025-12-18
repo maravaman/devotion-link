@@ -41,12 +41,12 @@ const Index = () => {
               <span className="text-5xl">🕉</span>
             </motion.div>
 
-            <h1 className="font-display text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-              Welcome to{" "}
-              <span className="text-gold">Sri Temple</span>
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
+              Sri Sri Sri Mahaganapathi Kamakshi Sametha{" "}
+              <span className="text-gold">Ekambareswara Temple</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 font-light max-w-2xl mx-auto">
-              A sacred sanctuary of peace, devotion, and divine blessings. Experience the eternal grace of the divine.
+              A sacred sanctuary of Lord Ekambareswara, Goddess Kamakshi & Lord Mahaganapathi. Experience divine blessings in Vizianagaram.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">

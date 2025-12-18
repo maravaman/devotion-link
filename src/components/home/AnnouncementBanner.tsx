@@ -4,21 +4,20 @@ import { Bell, Sparkles } from "lucide-react";
 const announcements = [
   {
     id: 1,
-    title: "Maha Shivaratri Celebrations",
-    description: "Special poojas and abhishekam throughout the night",
-    date: "March 8, 2024",
+    title: "Mandala Deeksha 2025",
+    description: "41-day special pooja begins October 22, 2025 - Panchamrutha Abhishekam at 5:00 AM",
     type: "festival",
   },
   {
     id: 2,
-    title: "Weekly Sundarkand Path",
-    description: "Every Saturday from 6 PM to 8 PM",
-    type: "regular",
+    title: "Panchamrutha Abhishekam",
+    description: "Participate in sacred abhishekam during Mandala period - ₹501/-",
+    type: "pooja",
   },
   {
     id: 3,
-    title: "Temple Renovation Update",
-    description: "New gopuram construction in progress",
+    title: "Digital Payments Accepted",
+    description: "Donate via BHIM, Google Pay, PhonePe, Paytm - Contact: 7207318809",
     type: "news",
   },
 ];

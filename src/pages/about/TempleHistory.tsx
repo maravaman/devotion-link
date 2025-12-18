@@ -2,23 +2,12 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
 
-const milestones = [
-  { year: "800 AD", event: "Temple foundation laid by ancient kings" },
-  { year: "1100 AD", event: "Main sanctum consecration ceremony" },
-  { year: "1450 AD", event: "Construction of the towering gopuram" },
-  { year: "1750 AD", event: "Major renovation by local rulers" },
-  { year: "1920 AD", event: "Trust establishment and modernization" },
-  { year: "1985 AD", event: "Golden jubilee celebrations" },
-  { year: "2010 AD", event: "Heritage conservation project completed" },
-  { year: "2020 AD", event: "Centenary of the temple trust" },
-];
-
 const TempleHistory = () => {
   return (
     <Layout>
       <PageHeader
         title="Temple History"
-        subtitle="A journey through centuries of devotion and divine grace"
+        subtitle="A legacy of devotion and divine grace"
         image="https://images.unsplash.com/photo-1585468274952-66591eb14165?w=1200&h=400&fit=crop"
       />
 
@@ -33,20 +22,20 @@ const TempleHistory = () => {
               className="prose prose-lg max-w-none text-muted-foreground"
             >
               <p className="text-lg leading-relaxed mb-6">
-                Sri Temple stands as a testament to the unwavering devotion of countless generations. Dating back over a millennium, this sacred site has been a beacon of spirituality, attracting pilgrims from far and wide seeking divine blessings and inner peace.
+                Sri Sri Sri Mahaganapathi Kamakshi Sametha Ekambareswara Temple, located in Bondada Veedhi, Vizianagaram, stands as a sacred monument to the devotion of countless generations. This traditional Hindu temple is dedicated to Lord Ekambareswara (Shiva) along with Goddess Kamakshi and Lord Mahaganapathi.
               </p>
               <p className="leading-relaxed mb-6">
-                According to ancient scriptures and local legends, the temple was founded during the reign of the Chola dynasty. It is believed that the great sage Agastya himself performed the initial consecration ceremony, invoking the divine presence that continues to bless devotees to this day.
+                The temple follows long-established religious customs and authentic Vedic rituals that have been preserved and passed down through generations. The sanctity of this sacred space has drawn devotees from across the region seeking divine blessings and spiritual solace.
               </p>
               <p className="leading-relaxed">
-                The architectural brilliance of the temple reflects the golden age of Hindu temple construction. The intricate carvings on the walls depict stories from the Puranas, while the towering gopuram serves as a magnificent gateway to the divine realm within.
+                Today, the temple continues to serve as a beacon of spirituality, conducting regular poojas, special ceremonies, and the renowned Mandala Deeksha programs that bring devotees closer to the divine.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Sacred Traditions */}
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -56,41 +45,73 @@ const TempleHistory = () => {
             className="text-center mb-12"
           >
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-              Historical Milestones
+              Sacred Traditions
             </h2>
             <div className="divider-ornament max-w-xs mx-auto">
               <span className="text-saffron">✦</span>
             </div>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-saffron via-gold to-maroon transform md:-translate-x-1/2" />
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="card-temple p-8"
+              >
+                <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+                  Vedic Rituals
+                </h3>
+                <p className="text-muted-foreground">
+                  The temple strictly follows authentic Vedic traditions. All poojas and ceremonies are conducted by learned priests who have mastered the ancient scriptures and rituals, ensuring that each worship service maintains its sacred significance.
+                </p>
+              </motion.div>
 
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={milestone.year}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`relative flex items-center gap-6 mb-8 ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
-                >
-                  <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                    <div className="card-temple p-6 inline-block">
-                      <span className="text-primary font-display text-xl font-bold">
-                        {milestone.year}
-                      </span>
-                      <p className="text-muted-foreground mt-2">{milestone.event}</p>
-                    </div>
-                  </div>
-                  <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-saffron rounded-full border-4 border-background shadow-glow transform md:-translate-x-1/2 z-10" />
-                  <div className="flex-1 hidden md:block" />
-                </motion.div>
-              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="card-temple p-8"
+              >
+                <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+                  Mandala Deeksha
+                </h3>
+                <p className="text-muted-foreground">
+                  The temple is renowned for its 41-day Mandala Deeksha program, during which devotees observe special vows and participate in daily rituals. This intensive spiritual practice has transformed countless lives over the years.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="card-temple p-8"
+              >
+                <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+                  Panchamrutha Abhishekam
+                </h3>
+                <p className="text-muted-foreground">
+                  The sacred Panchamrutha Abhishekam, performed with five holy substances, is a signature ritual of this temple. This powerful ceremony is believed to bestow divine blessings and fulfill the wishes of devotees.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="card-temple p-8"
+              >
+                <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+                  Community Service
+                </h3>
+                <p className="text-muted-foreground">
+                  Beyond religious ceremonies, the temple has always been a center for community welfare. The Sri Kamakshi Temple Service Trust continues this legacy, organizing programs for the benefit of devotees and society.
+                </p>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -106,17 +127,17 @@ const TempleHistory = () => {
               viewport={{ once: true }}
             >
               <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-                Legends & Lore
+                The Divine Presence
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Many miraculous stories surround this sacred temple. It is said that during a great drought, the presiding deity appeared in the dreams of the village elder, guiding them to a hidden spring that saved the entire community.
+                  The temple enshrines Lord Ekambareswara, a powerful form of Lord Shiva, along with Goddess Kamakshi and Lord Mahaganapathi. The divine trinity together creates a unique spiritual atmosphere that devotees describe as profoundly peaceful and transformative.
                 </p>
                 <p>
-                  Another legend speaks of a blind devotee whose sight was miraculously restored after years of devoted worship at this temple. Such stories of divine intervention have been passed down through generations.
+                  Devotees believe that sincere prayers offered at this temple are always answered. Many have shared experiences of miraculous blessings received after worship here, strengthening the faith of the community.
                 </p>
                 <p>
-                  The temple is also associated with celestial events. According to local belief, during certain auspicious nights, divine beings descend to worship alongside mortal devotees, blessing all present with their sacred presence.
+                  The presence of Lord Mahaganapathi, the remover of obstacles, makes this temple particularly auspicious for new beginnings. Devotees often visit before important life events to seek the Lord's blessings.
                 </p>
               </div>
             </motion.div>
@@ -127,7 +148,7 @@ const TempleHistory = () => {
             >
               <img
                 src="https://images.unsplash.com/photo-1604928141064-207cea6f571f?w=600&h=450&fit=crop"
-                alt="Ancient Temple Carvings"
+                alt="Sacred Temple"
                 className="rounded-xl shadow-temple-lg"
               />
             </motion.div>

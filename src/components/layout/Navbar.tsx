@@ -41,8 +41,8 @@ const Navbar = () => {
               <span className="text-primary-foreground font-display text-xl">🕉</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="font-display text-xl font-semibold text-foreground">Sri Temple</h1>
-              <p className="text-xs text-muted-foreground">Divine Blessings</p>
+              <h1 className="font-display text-lg font-semibold text-foreground leading-tight">Sri Ekambareswara Temple</h1>
+              <p className="text-xs text-muted-foreground">Vizianagaram</p>
             </div>
           </Link>
 

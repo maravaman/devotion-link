@@ -6,57 +6,58 @@ import PageHeader from "@/components/shared/PageHeader";
 const festivals = [
   {
     id: 1,
-    name: "Maha Shivaratri",
-    date: "March 8, 2024",
-    month: "March",
-    description: "The great night of Lord Shiva. Devotees observe fasting and night-long vigil with special abhishekam and bhajans.",
+    name: "Mandala Deeksha (41 Days)",
+    date: "October 22 - December 1, 2025",
+    month: "Oct-Dec",
+    description: "41-day intensive spiritual observance with special poojas, Panchamrutha Abhishekam at 5:00 AM, special decoration, and Maha Deeparadhana.",
     image: "https://images.unsplash.com/photo-1604608672516-f1b9b1f67a3e?w=400&h=300&fit=crop",
-    rituals: ["Rudrabhishekam", "Night-long prayers", "Pradosham Pooja"],
+    rituals: ["Panchamrutha Abhishekam", "Alankarana", "Maha Deeparadhana"],
+    highlight: true,
   },
   {
     id: 2,
-    name: "Ram Navami",
-    date: "April 17, 2024",
-    month: "April",
-    description: "Celebrating the birth of Lord Rama with special poojas, bhajans, and prasadam distribution.",
-    image: "https://images.unsplash.com/photo-1545987796-200677ee1011?w=400&h=300&fit=crop",
-    rituals: ["Rama Charitra Path", "Sundarkand", "Anna Danam"],
+    name: "Maha Shivaratri",
+    date: "February / March",
+    month: "Feb/Mar",
+    description: "The great night of Lord Shiva with special abhishekam, bhajans, and night-long vigil at Lord Ekambareswara shrine.",
+    image: "https://images.unsplash.com/photo-1604608672516-f1b9b1f67a3e?w=400&h=300&fit=crop",
+    rituals: ["Rudrabhishekam", "Night-long prayers", "Special Pooja"],
   },
   {
     id: 3,
-    name: "Hanuman Jayanti",
-    date: "April 23, 2024",
-    month: "April",
-    description: "Birthday celebration of Lord Hanuman with Sundarkand recitation and special decorations.",
+    name: "Vinayaka Chaturthi",
+    date: "August / September",
+    month: "Aug/Sep",
+    description: "Grand celebration for Lord Mahaganapathi with special poojas, decoration, and prasadam distribution.",
     image: "https://images.unsplash.com/photo-1609619385002-f40f1df9b5a4?w=400&h=300&fit=crop",
-    rituals: ["Hanuman Chalisa", "Oil offering", "Sindoor Pooja"],
+    rituals: ["Ganapathi Homam", "Special Abhishekam", "Modak offering"],
   },
   {
     id: 4,
     name: "Navaratri",
-    date: "October 3-12, 2024",
-    month: "October",
-    description: "Nine nights dedicated to Goddess Durga with special Kumkum Archana and Dandiya celebrations.",
+    date: "September / October",
+    month: "Sep/Oct",
+    description: "Nine nights dedicated to Goddess Kamakshi with Kumkum Archana and special decorations.",
     image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop",
-    rituals: ["Kumkum Archana", "Durga Saptashati", "Dandiya nights"],
+    rituals: ["Kumkum Archana", "Lalitha Sahasranamam", "Chandika Homam"],
   },
   {
     id: 5,
     name: "Deepavali",
-    date: "November 1, 2024",
-    month: "November",
-    description: "Festival of lights celebrated with grand lamp lighting ceremonies and fireworks.",
+    date: "October / November",
+    month: "Oct/Nov",
+    description: "Festival of lights celebrated with grand lamp lighting ceremonies and special poojas.",
     image: "https://images.unsplash.com/photo-1605102900605-43ddb45ab9b5?w=400&h=300&fit=crop",
-    rituals: ["Lakshmi Pooja", "1008 Diyas", "Prasadam Distribution"],
+    rituals: ["Lakshmi Pooja", "Deep Aradhana", "Prasadam Distribution"],
   },
   {
     id: 6,
     name: "Karthigai Deepam",
-    date: "December 15, 2024",
-    month: "December",
-    description: "The festival of lamps with the lighting of the sacred Mahadeepam on the temple gopuram.",
+    date: "November / December",
+    month: "Nov/Dec",
+    description: "The festival of lamps with grand Deeparadhana and special abhishekam for Lord Ekambareswara.",
     image: "https://images.unsplash.com/photo-1606298855672-3efb63017be8?w=400&h=300&fit=crop",
-    rituals: ["Mahadeepam", "108 Lamp Pooja", "Annabhishekam"],
+    rituals: ["Mahadeepam", "108 Lamp Pooja", "Special Abhishekam"],
   },
 ];
 
@@ -68,6 +69,29 @@ const Festivals = () => {
         subtitle="Experience the divine joy of our sacred celebrations"
         image="https://images.unsplash.com/photo-1605102900605-43ddb45ab9b5?w=1200&h=400&fit=crop"
       />
+
+      {/* Upcoming Mandala Highlight */}
+      <section className="py-8 bg-gradient-to-r from-saffron/20 to-gold/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
+              <Calendar className="w-5 h-5 text-primary" />
+              <span className="font-medium text-primary">Upcoming Special Event</span>
+            </div>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
+              Mandala Deeksha 2025
+            </h2>
+            <p className="text-muted-foreground">
+              41-Day Special Pooja begins <strong className="text-foreground">October 22, 2025</strong> | Panchamrutha Abhishekam: <strong className="text-foreground">₹501/-</strong>
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -81,7 +105,7 @@ const Festivals = () => {
               Annual Festival Calendar
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Join us throughout the year in celebrating these auspicious occasions with devotion and joy
+              Join us throughout the year in celebrating these auspicious occasions at Sri Ekambareswara Temple
             </p>
           </motion.div>
 
@@ -93,7 +117,7 @@ const Festivals = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="card-temple overflow-hidden group"
+                className={`card-temple overflow-hidden group ${festival.highlight ? 'ring-2 ring-primary' : ''}`}
               >
                 <div className="aspect-video relative overflow-hidden">
                   <img
@@ -101,10 +125,15 @@ const Festivals = () => {
                     alt={festival.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 left-4">
+                  <div className="absolute top-4 left-4 flex gap-2">
                     <span className="px-3 py-1 bg-saffron text-primary-foreground text-sm font-medium rounded-full">
                       {festival.month}
                     </span>
+                    {festival.highlight && (
+                      <span className="px-3 py-1 bg-primary text-primary-foreground text-sm font-medium rounded-full">
+                        Special
+                      </span>
+                    )}
                   </div>
                 </div>
                 <div className="p-6">
@@ -144,9 +173,15 @@ const Festivals = () => {
           <h3 className="font-display text-xl font-semibold text-foreground mb-2">
             Special Festival Timings
           </h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            During major festivals, the temple remains open for extended hours. Please check our announcements for specific timings and special darshan arrangements.
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">
+            During major festivals and Mandala period, the temple opens at 5:00 AM for special Panchamrutha Abhishekam. Please check our announcements for specific timings.
           </p>
+          <a
+            href="tel:+917207318809"
+            className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:underline"
+          >
+            📞 Contact: +91 72073 18809
+          </a>
         </div>
       </section>
     </Layout>
